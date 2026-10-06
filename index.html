@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brew & Bite Cafe</title>
+<meta name="description" content="Brew & Bite Cafe — coffee, bites and good vibes.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#11100e;--card:#1b1916;--text:#f6f1e8;--muted:#bdb4a7;--accent:#d9a35f;--line:#332f29}
+html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1100px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:10;background:rgba(17,16,14,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.navin{height:64px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;letter-spacing:.4px}.logo span{color:var(--accent)}
+.navlinks{display:flex;gap:22px;font-size:14px;color:var(--muted)}
+.hero{min-height:78vh;display:grid;place-items:center;text-align:center;padding:80px 0;background:linear-gradient(180deg,rgba(0,0,0,.35),var(--bg)),url("https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1600&q=85") center/cover}
+.hero-inner{max-width:720px}
+.badge{display:inline-block;border:1px solid rgba(217,163,95,.55);color:#f0c98f;padding:7px 13px;border-radius:99px;font-size:12px;margin-bottom:20px;background:rgba(0,0,0,.25)}
+h1{font-size:clamp(42px,10vw,76px);line-height:1.02;margin-bottom:18px}
+.hero p{color:#ddd2c3;font-size:17px;max-width:560px;margin:0 auto 28px}
+.btn{display:inline-block;background:var(--accent);color:#17120c;font-weight:800;padding:13px 20px;border-radius:12px;margin:5px}
+.btn.alt{background:transparent;color:var(--text);border:1px solid #665746}
+section{padding:78px 0}
+.kicker{color:var(--accent);font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+h2{font-size:clamp(30px,7vw,46px);margin:8px 0 28px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
+.card h3{margin-bottom:6px}.muted{color:var(--muted);font-size:14px}
+.price{color:var(--accent);font-weight:800;margin-top:12px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch}
+.aboutbox{border-radius:22px;min-height:300px;padding:30px;background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.65)),url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1000&q=80") center/cover;display:flex;align-items:end}
+.info{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:30px}
+.info p{color:var(--muted);margin:12px 0}
+.contact{background:#171512;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.contactbox{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center}
+footer{padding:28px 0;color:var(--muted);font-size:13px;text-align:center}
+@media(max-width:700px){
+.navlinks{display:none}
+.hero{min-height:72vh;padding:70px 0}
+.hero p{font-size:15px}
+.grid{grid-template-columns:1fr}
+.about{grid-template-columns:1fr}
+section{padding:58px 0}
+.contactbox{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container navin">
+    <div class="logo">BREW <span>&</span> BITE</div>
+    <div class="navlinks"><a href="#menu">Menu</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container hero-inner">
+    <div class="badge">COFFEE • BITES • GOOD VIBES</div>
+    <h1>Your daily dose of delicious.</h1>
+    <p>Fresh coffee, tasty bites and a cozy place to slow down. Drop in, grab your favourite and stay awhile.</p>
+    <a class="btn" href="#menu">View Menu</a>
+    <a class="btn alt" href="#contact">Find Us</a>
+  </div>
+</header>
+
+<section id="menu">
+  <div class="container">
+    <div class="kicker">Our favourites</div>
+    <h2>Made to be enjoyed.</h2>
+    <div class="grid">
+      <div class="card"><h3>Cappuccino</h3><p class="muted">Rich espresso, silky milk and a smooth finish.</p><div class="price">₹149</div></div>
+      <div class="card"><h3>Cold Coffee</h3><p class="muted">Creamy, chilled and just the right amount of sweet.</p><div class="price">₹169</div></div>
+      <div class="card"><h3>Cheese Sandwich</h3><p class="muted">Toasted bread, melty cheese and fresh veggies.</p><div class="price">₹189</div></div>
+      <div class="card"><h3>Paneer Wrap</h3><p class="muted">Spiced paneer, crunchy veggies and our house sauce.</p><div class="price">₹199</div></div>
+      <div class="card"><h3>Chocolate Brownie</h3><p class="muted">Warm, fudgy and perfect with coffee.</p><div class="price">₹129</div></div>
+      <div class="card"><h3>Masala Fries</h3><p class="muted">Crispy fries tossed in our signature seasoning.</p><div class="price">₹119</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container about">
+    <div class="aboutbox"><div><div class="kicker">The vibe</div><h2>Good coffee. Better moments.</h2></div></div>
+    <div class="info">
+      <div class="kicker">About us</div>
+      <h2>Made for your kind of break.</h2>
+      <p>Brew & Bite is a neighbourhood cafe built around simple food, great coffee and a relaxed atmosphere.</p>
+      <p>Whether you're catching up with friends, working for a while or just taking a break, there's always a seat for you.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="kicker">Why people come back</div>
+    <h2>Simple things, done well.</h2>
+    <div class="grid">
+      <div class="card"><h3>☕ Fresh Coffee</h3><p class="muted">Prepared fresh for every order.</p></div>
+      <div class="card"><h3>🍽️ Fresh Bites</h3><p class="muted">Comfort food made for easy sharing.</p></div>
+      <div class="card"><h3>✨ Cozy Space</h3><p class="muted">A relaxed place to meet, work or unwind.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container contactbox">
+    <div><div class="kicker">Visit us</div><h2>Come say hello.</h2><p class="muted">MG Road, Dhamtari • Open daily 9 AM – 10 PM</p></div>
+    <div>
+      <a class="btn" href="https://wa.me/919999999999">WhatsApp</a>
+      <a class="btn alt" href="https://maps.google.com">Get Directions</a>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Brew & Bite Cafe • Crafted with care.</footer>
+</body>
+</html>
